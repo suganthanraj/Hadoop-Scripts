@@ -1,0 +1,131 @@
+{% include "header.html" %}
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-sm-12 col-md-12  main">
+          <h1 class="page-header"></h1>
+          <h2 class="sub-header"></h2>
+          <div class="row">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Activity</th>
+                  <th>Description</th>
+                  <th>Start Script</th>
+                  <!-- <th>Stop Script</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+		  <td>1</td>
+                  <td>Hadoop Single Node Cluster Installation</td>
+                  <td>Hadoop Installation on Single or Master Machine</td>                  
+                  <td><button type="button" data-toggle="tooltip" data-placement="top" title="Execute" class="btn btn-success" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/singlenode'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                 <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#singleNodeModal"><span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span> Upload CSV
+</button></td> 
+                </tr>
+                <tr>
+				  <td>2</td>
+                  <td>Hadoop Multi Node Cluster Installation</td>
+                   <td>Hadoop Installation on multiple slave machine</td> 
+                    <td><button type="button" data-toggle="tooltip" data-placement="top" title="Execute" class="btn btn-success" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/multinode'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#multiNodeModal"><span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span> Upload CSV
+</button></td>
+                </tr> 
+		<tr>
+				  <td>3</td>
+                  <td>Commissioning Nodes to the Cluster</td>
+                   <td>Enabling nodes to the Master Cluster in which nodes are already in the cluster</td> 
+                   <td><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/commissionnode'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+               <td><!-- Button trigger modal -->
+<button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#commissionModal"><span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload CSV
+</button></td>
+                </tr>
+<tr>
+				  <td>4</td>
+                  <td>Decommissioning Nodes from the Cluster</td>
+                   <td>Disabling nodes to the Master Cluster in which nodes are already in the cluster</td> 
+                   <td><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/decommissionnode'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#decommissionModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload CSV
+</button></td>
+                </tr> 
+<tr>
+				  <td>5</td>
+                  <td>Adding Nodes to the Cluster</td>
+                   <td>Connecting New nodes to the Master Cluster in which nodes are not already in the cluster</td> 
+                   <td><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/addNode'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#addNodeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload CSV
+</button></td>
+                </tr> 
+<tr>
+				  <td>6</td>
+                  <td>Upgrade Hadoop Version</td>
+                   <td>Upgrade Hadoop Version in the Cluster</td> 
+                   <td><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/upgradehadoop'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#upgradeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload ZIP
+</button></td>
+                </tr>   
+ <tr>
+				  <td>7</td>
+                  <td>Refresh Nodes</td>
+                   <td>Refreshing All nodes available in the cluster</td> 
+                   <td colspan="2"><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/upgradehadoop'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <!--<td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#upgradeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload ZIP
+</button></td>-->
+                </tr>        
+<td>8</td>
+                  <td>Hadoop Cluster Health Status</td>
+                   <td>Health Status of all the nodes in the cluster</td> 
+                   <td colspan="2"><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/upgradehadoop'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <!--<td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#upgradeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload ZIP
+</button></td>-->
+                </tr>                                          
+                    <tr>
+				  <td>9</td>
+                  <td>Monitoring HDFS Diskspace</td>
+                   <td>Frequently monitoring the Hadoop File System Diskspace (HDFS) in the Cluster</td> 
+                   <td colspan="2"><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/upgradehadoop'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <!--<td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#upgradeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload ZIP
+</button></td>-->
+                </tr> 
+<tr>
+				  <td>10</td>
+                  <td>Start Hadoop Daemon as a linux Services</td>
+                   <td>Set a Hadoop Daemon as a linux services </td> 
+                   <td colspan="2"><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Execute" aria-label="Left Align" name="Install SingleNode"
+ onclick="self.location.href='/upgradehadoop'" onclick> <span class="glyphicon glyphicon glyphicon-triangle-right glyphicon-align-left" aria-hidden="true"></span>Execute </button></td>
+                  <!--<td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#upgradeModal"> <span class="glyphicon glyphicon-arrow-up glyphicon-align-left" aria-hidden="true"></span>
+  Upload ZIP
+</button></td>-->
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!-- Modal -->
+    {% include "modal.html" %}
+    {% include "footer.html" %}

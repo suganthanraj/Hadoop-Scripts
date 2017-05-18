@@ -1,0 +1,101 @@
+
+<div class="modal fade" id="singleNodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="singleNodeModal">Upload Single Node CSV File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/singleNodeUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=single_node_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/singleNodeUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="multiNodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="multiNodeModal">Upload MultiNode Cluster CSV File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/multiNodeUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=multi_node_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/multiNodeUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="commissionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="commissionModal">Upload Commission Node CSV File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/commUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=com_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/commUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="decommissionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="decommissionModal">Upload Decommission Node CSV File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/decommUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=decom_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/decommUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="addNodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addNodeModal">Upload Add Node CSV File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/addNodeUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=add_node_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/addNodeUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="upgradeModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="upgradeModal">Upload Hadoop ZIP File</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/upgradeUpload" method="post" enctype="multipart/form-data">
+      		<p><input type=file name=upgrade_file>
+         	<input type=submit style="margin-top:-30px;float:right;" class="btn btn-primary" onclick="self.location.href='/upgradeUpload'" onclick value=Upload>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div>
